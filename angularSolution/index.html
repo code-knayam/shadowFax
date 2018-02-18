@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Employee Management</title>
+
+    <!-- Importing Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    
+    <!-- Importing Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Importing j-query -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- Importing scripts -->
+    <script src="scripts/module.js"></script>
+    <script src="scripts/routing.js"></script>
+    <script src="scripts/empService.js"></script>
+    <script src="scripts/controllers.js"></script>
+
+    <!-- Importing Styles -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+<body ng-app="empApp">    
+    
+    <div ng-view></div>
+    
+</body>
+</html>

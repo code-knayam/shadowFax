@@ -1,0 +1,51 @@
+<div class="add-container">
+    <div class="container">
+        <div class="row">
+            <h3>
+                Add an Employee            
+                <a href="#addEmp">
+                    <i class="fa fa-plus"></i>
+                </a>
+            </h3>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron" ng-controller="viewEmpController">
+    <div class="container">
+        <h2>
+            View Employee Details
+        </h2>
+        <div class="row">
+
+            <div class="col-md-12">
+                <table class="table table-hover table-bordered table-striped">
+                    <thead>
+                        <tr class="success">
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Designation</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr 
+                            ng-repeat="emp in empDetails"
+                            ng-hide="deleteEmp">
+                            <td>{{emp.name}}</td>
+                            <td>{{emp.age}}</td>
+                            <td>{{emp.designation}}</td>
+                            <td>
+                                <i title="Delete" ng-click="onDeleteEmp(emp.id)" class="fa fa-trash delete-emp"></i>
+                                &nbsp;&nbsp;&nbsp;
+                                <i title="Edit" ng-click="onEditEmp(emp.id)" class="fa fa-edit edit-emp"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="alert alert-warning" ng-if="defaultView">No Emp Details Found</p>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="add-container">
+        <div class="container">
+            <div class="row">
+                <h3>                    
+                    <a href="#/">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    Go Back
+                </h3>
+            </div>
+        </div>
+    </div>
+    
+<div class="jumbotron" ng-controller="addEmpController">
+    <div class="container">
+
+        <h2>
+            Add Employee Details
+            <br>
+            <span class="info">
+                All fields are required
+            </span>
+        </h2>
+
+        <div class="col-md-6 col-xs-12">
+            <form name="addEmpForm">
+
+                <!-- Name Field -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input class="form-control" type="text" name="firstName" ng-model="firstName" ng-pattern="/^[a-zA-Z]*$/" required>
+                            <span class="error" ng-if="addEmpForm.firstName.$touched && addEmpForm.firstName.$invalid">
+                                <span ng-if="addEmpForm.firstName.$error.required">First Name is required.
+                                </span>
+                                <span ng-if="addEmpForm.firstName.$error.pattern">Only characters allowed.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input class="form-control" type="text" name="lastName" ng-model="lastName" ng-pattern="/^[a-zA-Z]*$/" required>
+                            <span class="error" ng-if="addEmpForm.lastName.$touched && addEmpForm.lastName.$invalid">
+                                <span ng-if="addEmpForm.lastName.$error.required">Last Name is required
+                                </span>
+                                <span ng-if="addEmpForm.lastName.$error.pattern">Only characters allowed.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info Field -->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="designation">Designation</label>
+                            <select class="form-control" name="designation" id="designation" ng-model="designation" required>
+                                <option value="">None</option>
+                                <option ng-repeat="desig in designations" value="{{desig}}">{{desig}}</option>
+                            </select>
+                            <span class="error" ng-if="addEmpForm.designation.$touched && addEmpForm.designation.$invalid">
+                                <span ng-if="addEmpForm.designation.$error.required">Designation is required
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input class="form-control" type="number" min="19" max="59" name="age" ng-model="age" ng-pattern="/^[0-9]*$/" required>
+                            <span class="error" ng-if="addEmpForm.age.$touched && addEmpForm.age.$invalid">
+                                <span ng-if="addEmpForm.age.$error.required">Age is required
+                                </span>
+                                <span ng-if="addEmpForm.age.$error.pattern">Only numbers are allowed
+                                </span>
+                                <span ng-if="addEmpForm.age.$error.min || addEmpForm.age.$error.max">Age should be greater than 18 and less than 60.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <button ng-disabled="addEmpForm.$invalid" ng-click="onSubmit()" class="btn submit-btn">Add Employee Details</button>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+</div>

@@ -1,0 +1,109 @@
+.add-container {
+    height: 100px;
+    background: rgba(218, 127, 127, 0.8);
+    padding: 30px;
+}
+.add-container a {
+    text-decoration: none;
+    color: #111;
+    padding: 0 5px;
+    margin: 0 10px;
+    font-size: 20px;
+    text-align: center;
+}
+.jumbotron {
+    min-height: 630px;
+    margin: 0;
+}
+
+.jumbotron h2 {
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.jumbotron h2 .info {
+    font-size: 13px;
+    color: #aaa;
+    margin: 0;
+    padding: 0;
+}
+
+.jumbotron .form-group {
+    margin-bottom: 30px;
+    min-height: 110px;
+}
+
+.jumbotron .form-control {
+    border: none;
+    border-bottom: 1px solid #111;
+    border-radius: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    background: transparent;
+    padding-left: 0;
+    transition: .2s ease-in;
+}
+
+.jumbotron .form-control:focus {
+    border-bottom: 2px solid #111;
+}
+.jumbotron .form-control.ng-touched.ng-invalid {
+    border-bottom: 2px solid rgb(255, 0, 0);
+}
+
+.jumbotron label {
+    margin: 0;
+    padding: 0;
+    color: #666;
+    font-size: 13px;
+}
+
+ .error {
+    font-size: 13px;
+    color: rgb(214, 58, 58);
+}
+
+.jumbotron .submit-btn {
+    margin-left: 15px;
+    border-radius: 0;
+    background: rgb(75, 158, 236);
+    color: #fff;
+    font-size: 17px;
+    font-weight: 300;
+    transition: .5s ease-in;
+}
+
+.jumbotron .submit-btn:hover {
+    box-shadow: 0 3px 10px #444;
+}
+
+.table {
+    text-align: center;
+}
+.table i {
+    cursor: pointer;  
+    margin: 0 3px;  
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;    
+    color: #fff;
+    font-size: 15px;
+    transition: .5s;
+}
+.table .delete-emp {    
+    background: rgb(255, 43, 43);    
+    border: 1px solid rgb(255, 43, 43);    
+}
+.table .delete-emp:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(255, 43, 43);    
+}
+.table .edit-emp {    
+    background: rgb(64, 43, 255);    
+    border: 1px solid rgb(64, 43, 255);    
+}
+.table .edit-emp:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(64, 43, 255);    
+}
